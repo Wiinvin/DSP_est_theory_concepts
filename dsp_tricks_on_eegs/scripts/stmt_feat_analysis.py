@@ -66,7 +66,6 @@ def main():
 
     for edf_f in flist:
         print "working on file: ", edf_f
-        import pdb;pdb.set_trace()
         edf_header = ner.return_header(edf_f)
         edf_dur = edf_header['n_records']
         edf_info = ner.load_edf(edf_f, 0, edf_dur, montage_01)
@@ -103,7 +102,7 @@ def main():
                                                               lag,
                                                               noverlap = hopsize)
         stft.plot_spectrogram(spec_est, 250, len(sig_sample), start_bounds, Nxticks = 15)
-        import pdb;pdb.set_trace()
+
         music_w = lspec.root_music(sig_sample, mdl_order, lag)
         amp, phi = lspec.freqaphi(sig_sample, music_w)
 

@@ -70,7 +70,6 @@ def main():
         amp[i] = np.sqrt(freqs[i] ** 2  + freqs[len(f_comp) + i] ** 2)
         phi[i] = np.arctan2(freqs[len(f_comp) + i], freqs[i]) * 180 / np.pi
 
-    #import pdb;pdb.set_trace()
     #print (amp)
     #print (phi)
     #print (np.argmax(amp))

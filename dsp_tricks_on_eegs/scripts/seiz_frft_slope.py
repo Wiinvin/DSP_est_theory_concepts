@@ -208,7 +208,7 @@ def main():
         plt.xlabel("alpha with increments 0.001")
         plt.ylabel("FrFt bins")
 
-        import pdb;pdb.set_trace()
+
         fig = plt.figure(2)
         ax = Axes3D(fig)
         x1 = np.arange(0, len(alpha_range), 1)

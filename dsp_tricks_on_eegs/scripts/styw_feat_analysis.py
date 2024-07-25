@@ -103,7 +103,7 @@ def main():
                                                               cov_lag,
                                                               noverlap = hopsize)
         stft.plot_spectrogram(spec_est, 250, len(sig_sample), start_bounds, Nxticks = 15)
-        import pdb;pdb.set_trace()
+
         hoyw_w = lspec.high_order_yw(sig_sample, mdl_order, cov_lag, cov_lag)
         amp, phi = lspec.freqaphi(sig_sample, hoyw_w)
 

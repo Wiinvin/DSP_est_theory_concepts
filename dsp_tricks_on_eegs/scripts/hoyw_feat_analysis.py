@@ -113,7 +113,6 @@ def main():
         #
         reconst_sig = lspec.reconst_sig(hoyw_w, amp, phi, dat_len)
 
-        import pdb;pdb.set_trace()
         ## plot the signal
         #
         fig, axs = plt.subplots(3,1)

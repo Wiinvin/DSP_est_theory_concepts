@@ -246,7 +246,7 @@ def create_stmt_spectrogram(ts, winlen, target_fcomp, cov_lag, wintype = "rect",
         amp_h = 2 * abs(amp[ind])
 #        print fh
 #        print amp_h
-#        import pdb;pdb.set_trace()
+
         for i in range(len(fh)):
             bin_est = fh[i] * len(windowed_sig[i])
             ft_mtx[int(bin_est)] = amp_h[i]
@@ -316,7 +316,6 @@ def create_styw_spectrogram(ts, winlen, target_fcomp, cov_lag, wintype = "rect",
     mdl_order = target_fcomp * 2
 
     for i,start in enumerate(starts):
-#        import pdb;pdb.set_trace()        
         ## initialize empty ft_matrix
         #
         ft_mtx = np.ones((len(windowed_sig[i])/2), dtype=np.float32)
@@ -338,7 +337,7 @@ def create_styw_spectrogram(ts, winlen, target_fcomp, cov_lag, wintype = "rect",
 #            print bin_est
 #            print amp_h[i]
             if int(bin_est) == 125:
-                import pdb;pdb.set_trace()
+
             ft_mtx[int(bin_est)] = amp_h[i]
             if not ((int(bin_est)-1 >= 0) or (int(bin_est)+1 >=0.5 * len(windowed_sig[i]))):
                 ft_mtx[int(bin_est)-1] = amp_h[i]/2.0
